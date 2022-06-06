@@ -7,7 +7,13 @@ namespace SistemaClinicas.Models.Entities
 {
     public class Medico : Persona
     {
-        public int Matricula { get; set; }
-        public string Especialidad { get; set; }
+        private int Matricula { get; set; }
+        private string Especialidad { get; set; }
+
+        public Medico(string nameMedico, int matricula, string especialidad) : base(nameMedico)
+        {
+            Matricula = matricula;
+            Especialidad = especialidad;
+        }
     }
 }

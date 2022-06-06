@@ -7,7 +7,12 @@ namespace SistemaClinicas.Models.Entities
 {
     public class Clinica
     {
-        public List<Paciente> listaPacientes { get; set; }
-        public List<Medico> listaMedicos { get; set; }
+        private List<Paciente> ListaPacientes { get; set; }
+        private List<Medico> ListaMedicos { get; set; }
+        public Clinica()
+        {
+            ListaPacientes = new List<Paciente>();
+            ListaMedicos = new List<Medico>();
+        }
     }
 }

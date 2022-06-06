@@ -7,6 +7,11 @@ namespace SistemaClinicas.Models.Entities
 {
     public class Persona
     {
-        public string Nombre { get; set; }
+        private string Nombre { get; set; }
+
+        public Persona(string nombre)
+        {
+            Nombre = nombre;
+        }
     }
 }
