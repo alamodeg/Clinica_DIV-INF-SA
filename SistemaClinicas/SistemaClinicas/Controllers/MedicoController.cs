@@ -16,7 +16,9 @@ namespace SistemaClinicas.Controllers
             List<Medico> ListadoMedicos = new List<Medico>();
 
             Medico med1 = new Medico("Jose", 19923, "Ginecologo");
+            med1.Id = 1;
             Medico med2 = new Medico("Javier", 32123, "Cirujano");
+            med2.Id = 2;
 
             ListadoMedicos.Add(med1);
             ListadoMedicos.Add(med2);
@@ -33,7 +35,7 @@ namespace SistemaClinicas.Controllers
         // GET: MedicoController/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new Medico());
         }
 
         // POST: MedicoController/Create
@@ -52,9 +54,11 @@ namespace SistemaClinicas.Controllers
         }
 
         // GET: MedicoController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult SelectMedico(int id)
         {
-            return View();
+            Medico med1 = new Medico("Jose", 19923, "Ginecologo");
+            med1.Id = 1;
+            return View(med1);
         }
 
         // POST: MedicoController/Edit/5

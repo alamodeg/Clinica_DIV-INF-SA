@@ -17,5 +17,10 @@ namespace SistemaClinicas.Models.Entities
             Matricula = matricula;
             Especialidad = especialidad;
         }
+
+        public Medico(string nombre)
+        {
+
+        }
     }
 }
