@@ -13,15 +13,25 @@ namespace SistemaClinicas.Controllers
         // GET: MedicoController
         public ActionResult MostrarMedicos()
         {
+            //Mock temporal
             List<Medico> ListadoMedicos = new List<Medico>();
 
-            Medico med1 = new Medico("Jose", 19923, "Ginecologo");
-            med1.Id = 1;
-            Medico med2 = new Medico("Javier", 32123, "Cirujano");
-            med2.Id = 2;
+            Medico mimedico1 = new Medico()
+            {
+                Nombre = "Jose",
+                Matricula = 1231233,
+                Especialidad = "Cirujano"
+            };
 
-            ListadoMedicos.Add(med1);
-            ListadoMedicos.Add(med2);
+            Medico mimedico2 = new Medico()
+            {
+                Nombre = "Musi",
+                Matricula = 9123,
+                Especialidad = "Cardiologo"
+            };
+
+            ListadoMedicos.Add(mimedico1);
+            ListadoMedicos.Add(mimedico2);
 
             return View(ListadoMedicos);
         }
@@ -33,7 +43,7 @@ namespace SistemaClinicas.Controllers
         }
 
         // GET: MedicoController/Create
-        public ActionResult Create()
+        public ActionResult CreateMedic()
         {
             return View(new Medico());
         }
@@ -41,7 +51,7 @@ namespace SistemaClinicas.Controllers
         // POST: MedicoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Medico MiMedico)
         {
             try
             {
@@ -54,11 +64,9 @@ namespace SistemaClinicas.Controllers
         }
 
         // GET: MedicoController/Edit/5
-        public ActionResult SelectMedico(int id)
+        public ActionResult Edit(int id)
         {
-            Medico med1 = new Medico("Jose", 19923, "Ginecologo");
-            med1.Id = 1;
-            return View(med1);
+            return View();
         }
 
         // POST: MedicoController/Edit/5

@@ -10,10 +10,5 @@ namespace SistemaClinicas.Models.Entities
     {
         public int Id { get; set ; }
         public string Nombre { get; set; }
-
-        public Persona(string nombre)
-        {
-            Nombre = nombre;
-        }
     }
 }

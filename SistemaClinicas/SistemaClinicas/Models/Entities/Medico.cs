@@ -11,16 +11,12 @@ namespace SistemaClinicas.Models.Entities
         [Required(ErrorMessage ="Este campo es obligatorio!")]
         public int Matricula { get; set; }
         public string Especialidad { get; set; }
-
+        /*
         public Medico(string nameMedico, int matricula, string especialidad) : base(nameMedico)
         {
             Matricula = matricula;
             Especialidad = especialidad;
         }
-
-        public Medico(string nombre)
-        {
-
-        }
+        */
     }
 }
